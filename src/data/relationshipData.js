@@ -25,7 +25,7 @@ export const relationshipData = {
             title: "Nuestro primer viaje",
             date: "24 de Abril",
             description: "Rumbo a Lima, nuestra primera gran aventura juntos. Haz click para ver el plan.",
-            image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&auto=format&fit=crop",
+            image: "https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?w=800&auto=format&fit=crop", // A symbolic plane/travel image
             link: "/nuestro-viaje"
         },
     ],

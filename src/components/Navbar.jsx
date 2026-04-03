@@ -103,6 +103,33 @@ const Navbar = () => {
                             {link.name}
                         </Link>
                     ))}
+
+                    <div className="nav-item mt-8 pt-8 border-t border-white/10 w-full flex flex-col items-center gap-6">
+                        {user ? (
+                            <>
+                                <span className="text-xs text-gold uppercase tracking-[0.3em] flex items-center gap-2">
+                                    <UserIcon size={14} /> {user.email?.split('@')[0]}
+                                </span>
+                                <button
+                                    onClick={() => {
+                                        handleLogout();
+                                        setIsOpen(false);
+                                    }}
+                                    className="flex items-center gap-3 text-white/40 hover:text-white uppercase tracking-widest text-xs transition-colors"
+                                >
+                                    <LogOut size={18} /> Cerrar Sesión
+                                </button>
+                            </>
+                        ) : (
+                            <Link
+                                to="/login"
+                                onClick={() => setIsOpen(false)}
+                                className="px-10 py-4 rounded-full border border-gold/30 text-gold uppercase tracking-[0.3em] text-xs hover:bg-gold hover:text-black transition-all"
+                            >
+                                Entrar al Portal
+                            </Link>
+                        )}
+                    </div>
                 </div>
             </div>
         </>

@@ -245,15 +245,22 @@ const DatesPage = () => {
                                         </button>
                                         <span className="text-[8px] text-zinc-600 uppercase tracking-widest truncate max-w-[60px]">{date.category}</span>
                                     </div>
-                                    <h3 className={`text-sm md:text-base font-serif leading-tight line-clamp-2 min-h-10 ${isCompleted ? 'text-white' : 'text-white/60'
+                                    <div className={`text-sm md:text-base font-serif leading-tight line-clamp-2 min-h-12 ${isCompleted ? 'text-white' : 'text-white/60'
                                         }`}>
                                         {date.title}
-                                    </h3>
+                                    </div>
 
-                                    <div className="mt-3 flex items-center justify-between">
-                                        <span className="text-gold font-serif text-lg opacity-20 group-hover:opacity-100 transition-opacity">
-                                            #{date.id}
-                                        </span>
+                                    <div className="mt-4 flex items-center justify-between">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-gold font-serif text-lg opacity-20 group-hover:opacity-100 transition-opacity">
+                                                #{date.id}
+                                            </span>
+                                            {completedDates[date.id]?.photo_url && (
+                                                <div className="w-8 h-8 rounded-full overflow-hidden border border-gold/30 shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+                                                    <img src={completedDates[date.id].photo_url} className="w-full h-full object-cover" alt="" />
+                                                </div>
+                                            )}
+                                        </div>
                                         <ChevronRight size={14} className="text-white/10 group-hover:text-gold/50 transition-colors" />
                                     </div>
                                 </div>
