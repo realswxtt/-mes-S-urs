@@ -43,7 +43,6 @@ const LimaTrip = () => {
     useEffect(() => {
         fetchTodos();
         const timer = setInterval(() => {
-            git
             setTimeLeft(calculateTimeLeft());
         }, 60000);
 
