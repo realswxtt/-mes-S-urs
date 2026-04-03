@@ -6,8 +6,8 @@ const MusicPlayer = () => {
     const [isMuted, setIsMuted] = useState(false);
     const audioRef = useRef(null);
 
-    // Romantic instrumental track (using a more reliable placeholder if possible)
-    const audioSrc = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+    // Mauricio Mesones - La cumbia linda del amor
+    const audioSrc = "/la-cumbia-linda.mp3";
 
     const togglePlay = () => {
         if (!audioRef.current) return;
@@ -46,7 +46,7 @@ const MusicPlayer = () => {
             {isPlaying && (
                 <div className="flex items-center gap-2 overflow-hidden animate-fade-in-right">
                     <div className="text-[10px] font-sans tracking-widest uppercase text-white/60 whitespace-nowrap">
-                        Nuestra Música
+                        La Cumbia Linda del Amor
                     </div>
                     <button onClick={toggleMute} className="text-white/40 hover:text-white transition-colors p-1">
                         {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
